@@ -9,8 +9,10 @@ def show_top_animation():
 
 	width, height = 320, 86
 	screen_width = window.winfo_screenwidth()
+	screen_height = window.winfo_screenheight()
 	x = (screen_width - width) // 2
-	window.geometry(f"{width}x{height}+{x}+24")
+	y = (screen_height - height) // 2
+	window.geometry(f"{width}x{height}+{x}+{y}")
 
 	canvas = tk.Canvas(window, width=width, height=height,
 					   bg="#17202a", highlightthickness=0)
